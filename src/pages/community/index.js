@@ -14,7 +14,10 @@ import slackImage from '../../../public/images/community/slack.png';
 
 const CommunityPage = () => (
   <Layout>
-    <Seo title="Books" keywords={['apis', 'api', 'rest', 'rpc', 'graphql']} />
+    <Seo
+      title="Community"
+      keywords={['apis', 'api', 'rest', 'rpc', 'graphql']}
+    />
     <Container>
       <Grid gridTemplateColumns={['1fr', '1fr', '1fr 1fr']} gap={20}>
         <Stack>
