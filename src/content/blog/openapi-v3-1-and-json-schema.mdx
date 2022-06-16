@@ -9,7 +9,7 @@ author: Phil Sturgeon
 
 > **Updated 2019-05-29:** OpenAPI v3.1 has dropped SemVer, so a few things that were going to be deprecated are now just straight up removed. This post has been updated to reflect that.
 
-> **Updated 2021-01-10:** JSON Schema released Draft 2020-12 which clarified a few edge cases, it's not a meaningful change to the content of the article but we've replaced references to 2019-09 to avoid future confusion.
+> **Updated 2021-01-10:** JSON Schema released Draft 2020-12 which clarified a few edge cases, it's not a meaningful change to the content of the article but we've replaced references to 2020-12 to avoid future confusion.
 
 OpenAPI using an "extended subset" of JSON Schema has caused confusion in the API space since before I had even heard of OpenAPI. Thanks to a lot of hard work from a lot of people over the last 6 months, OpenAPI v3.1 will in fact solve this problem, and there was much rejoicing. 
 
@@ -17,7 +17,7 @@ For anyone who's not read a million words on the topic from me on this topic alr
 
 Well, good news. OpenAPI v3.1 has brought along some substantial change. For a while we thought we'd see a few of OpenAPI-special keywords deprecated, and the JSON Schema keywords and functionality supported, but this "two ways of doing something" was not looking good for tooling vendors. So, after much consideration, OpenAPI v3.1 has dropped SemVer in order to more quickly and easily properly align itself with JSON Schema. Here's an overview:
 
-1. OpenAPI Schema is a vocabulary of JSON Schema 2019-09
+1. OpenAPI Schema is a vocabulary of JSON Schema 2020-12
 1. type arrays are now supported
 1. nullable has been removed
 1. arbitrary keywords are now supported without needing an `x-` on the front
@@ -26,18 +26,18 @@ Well, good news. OpenAPI v3.1 has brought along some substantial change. For a w
 
 Let's look at some of this a bit closer.
 
-## OpenAPI Schema is a Vocabulary of JSON Schema 2019-09
+## OpenAPI Schema is a Vocabulary of JSON Schema 2020-12
 
-Check out this new wording from the [OpenAPI Specification](https://github.com/OAI/OpenAPI-Specification/blob/v3.1.0-dev/versions/3.1.0.md).
+Check out this new wording from the [OpenAPI Specification](https://spec.openapis.org/oas/v3.1.0.html).
 
 > The OpenAPI Schema Object is a JSON Schema vocabulary which extends JSON
 > Schema Core and Validation vocabularies. As such any keyword available for those
 > vocabularies is by definition available in OpenAPI, and will work the exact same
 > way.
 
-Booyeah. OpenAPI no longer defines a complex list of discrepancies, it simply says that the Schema Object properties are defined in [JSON Schema Core](https://json-schema.org/draft/2019-09/json-schema-core.html) and [JSON Schema Validation](https://json-schema.org/draft/2019-09/json-schema-validation.html). 
+Booyeah. OpenAPI no longer defines a complex list of discrepancies, it simply says that the Schema Object properties are defined in [JSON Schema Core](https://json-schema.org/draft/2020-12/json-schema-core.html) and [JSON Schema Validation](https://json-schema.org/draft/2020-12/json-schema-validation.html). 
 
-**There are no more "missing" JSON Schema properties. If a keyword exists in JSON Schema Draft 2019-09 (Core or Validation), then it's good to use in OpenAPI v3.1.**
+**There are no more "missing" JSON Schema properties. If a keyword exists in JSON Schema Draft 2020-12 (Core or Validation), then it's good to use in OpenAPI v3.1.**
 
 How about keywords which worked... differently?
 
@@ -93,9 +93,9 @@ This is probably the biggest breaking change, but it's such an easy find and rep
 
 ## Any `format` from JSON Schema is fine
 
-JSON Schema Draft 2019-09 added a few new formats so go wild with those. There are some changes to how formats are interpreted now, and they are being relaxed from validation, to annotations which could be used for validation if configured to do so. 
+JSON Schema Draft 2020-12 added a few new formats so go wild with those. There are some changes to how formats are interpreted now, and they are being relaxed from validation, to annotations which could be used for validation if configured to do so. 
 
-Basically, trying to validate that data follows the rules for what a specific validation tool things is valid for that format is... awful. Different tools disagree about what an email address is, despite there being [a standard for what a valid email address is](https://json-schema.org/draft/2019-09/json-schema-validation.html#RFC5322). 
+Basically, trying to validate that data follows the rules for what a specific validation tool things is valid for that format is... awful. Different tools disagree about what an email address is, despite there being [a standard for what a valid email address is](https://json-schema.org/draft/2020-12/json-schema-validation.html#RFC5322). 
 
 Tool vendors can feel free to keep existing format validation, but probably move it behind a config switch. Maybe the next major version of that tooling could have it default off.
 
@@ -200,7 +200,7 @@ OpenAPI v3.1 has a bunch of other cool stuff coming too:
 - `paths` is now optional so an API description could be Webhooks only
 - Maybe [overlays](https://github.com/OAI/OpenAPI-Specification/blob/master/proposals/004_Overlays.md) will be a thing
 
-We'll talk about all this in future articles in the future. Until then, make sure your tooling is ready for JSON Schema 2019-09 and OpenAPI v3.1. Many tooling vendors are hard at work on this as we speak, with a few validation tools already done:
+We'll talk about all this in future articles in the future. Until then, make sure your tooling is ready for JSON Schema 2020-12 and OpenAPI v3.1. Many tooling vendors are hard at work on this as we speak, with a few validation tools already done:
 
 - **.NET** - [Manatee.Json](https://github.com/gregsdennis/Manatee.Json)
 - **Java** - [Snow](https://github.com/ssilverman/snowy-json)
