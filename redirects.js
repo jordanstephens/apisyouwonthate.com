@@ -158,12 +158,12 @@ module.exports = [
   },
   {
     source: '/openapi-and-json-schema-divergence-part-2-:id',
-    destination: '/blog/openapi-v31-and-json-schema-2019-09',
+    destination: '/blog/openapi-v3-1-and-json-schema',
     permanent: true,
   },
   {
     source: '/blog/solving-openapi-and-json-schema-divergence',
-    destination: '/blog/openapi-v31-and-json-schema-2019-09',
+    destination: '/blog/openapi-v3-1-and-json-schema',
     permanent: true,
   },
   {
@@ -252,5 +252,10 @@ module.exports = [
     source: '/blog/openapi-v31-and-json-schema-2019-09',
     destination: '/blog/openapi-v31-and-json-schema',
     permanent: true,
+  },
+  {
+    source: '/authors/marc-andre-giroux',
+    destination: '/authors/marc-giroux',
+    permanent: false,
   },
 ];

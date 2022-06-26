@@ -38,7 +38,7 @@ module.exports = withBundleAnalyzer(
     // },
     pageExtensions: ['js', 'jsx', 'md', 'mdx'],
     images: {
-      domains: ['i.ytimg.com'],
+      domains: ['i.ytimg.com', 'remotive.com'],
     },
     async redirects() {
       return redirects;

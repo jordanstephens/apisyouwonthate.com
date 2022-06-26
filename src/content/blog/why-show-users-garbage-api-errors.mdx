@@ -87,7 +87,7 @@ Most importantly, why is documentation telling me more than what the end user is
 
 ## High Quality API Errors
 
-API clients cannot work with what they don't have, so API developers should always try to explain what has gone wrong. We've written about [creating high quality API errors](https://apisyouwonthate.com/blog/creating-good-api-errors-in-rest-graphql-and-grpc) for humans and computers in the past, and the short version is: use [RFC 7807](https://tools.ietf.org/html/rfc7807), or maybe leverage [JSON:API Errors](https://jsonapi.org/examples/#error-objects) properly if you're already using JSON:API.
+API clients cannot work with what they don't have, so API developers should always try to explain what has gone wrong. We've written about [creating high quality API errors](/blog/useful-api-errors-for-rest-graphql-and-grpc) for humans and computers in the past, and the short version is: use [RFC 7807](https://tools.ietf.org/html/rfc7807), or maybe leverage [JSON:API Errors](https://jsonapi.org/examples/#error-objects) properly if you're already using JSON:API.
 
 Something like RFC 7807 is absolutely brilliant, because not only does it suggest you write a useful error message for humans, but it allows other metadata to be provided which mean API clients can provide all sorts of useful information, by knowing that `https://example.com/probs/out-of-credit` is going to have a `balance` property.
 

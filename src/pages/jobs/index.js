@@ -17,10 +17,10 @@ export const getStaticProps = async () => {
 const JobsPage = ({ jobs }) => {
   return (
     <Layout>
-      <Seo title="Jobs" />
+      <Seo title="Jobs for API Developers and Designers" />
       <Container>
         <Stack>
-          <Heading as="h2">API Jobs</Heading>
+          <Heading as="h1">Jobs for API Developers and Designers</Heading>
           <SimpleGrid columns={[1, 1, 2, 3]} spacing={8}>
             {jobs.map((job) => (
               <div key={job.id || job.slug}>
