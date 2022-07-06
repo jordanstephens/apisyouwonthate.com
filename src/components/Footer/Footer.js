@@ -49,8 +49,8 @@ const Footer = () => {
         <Stack>
           <Subtitle>Community</Subtitle>
           <Link href="/community">Join our Community</Link>
-          <Link href="/authors">About Us</Link>
-          <Link href="/authors">Authors</Link>
+          <Link href="/about">About Us</Link>
+          <Link href="/about">Authors</Link>
           <Link href="/conduct">Code of Conduct</Link>
         </Stack>
         <Stack>

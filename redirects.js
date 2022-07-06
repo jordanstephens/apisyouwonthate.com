@@ -264,4 +264,9 @@ module.exports = [
       '/blog/json-schema-client-side-validation',
     permanent: true,
   },
+  {
+    source: '/authors/marc-andre-giroux',
+    destination: '/authors/marc-giroux',
+    permanent: false,
+  },
 ];

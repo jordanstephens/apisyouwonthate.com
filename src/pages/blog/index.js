@@ -13,6 +13,7 @@ import {
   NewsletterCTA,
   PodcastFeed,
 } from '../../components';
+import { SEO } from '../../components/SEO';
 
 import { getAllPosts } from '../../lib/blogPostLoader';
 
@@ -38,6 +39,7 @@ const BlogPage = ({ posts }) => {
 
   return (
     <Layout>
+      <SEO title="All articles" />
       <Container>
         <Stack spacing={8}>
           <Heading as="h1">All Articles</Heading>

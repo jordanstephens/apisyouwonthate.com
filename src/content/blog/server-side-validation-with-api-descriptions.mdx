@@ -36,7 +36,7 @@ developing a private API for only two known clients, there are always chances
 that validation in those clients breaks down; or someone will hit those APIs
 with curl or Postman and send some invalid stuff. Even if the database catches
 invalid data, the [errors won't be
-useful](/blog/creating-good-api-errors-in-rest-graphql-and-grpc).
+useful](/blog/useful-api-errors-for-rest-graphql-and-grpc).
 
 Writing validation rules has always been a major source of pains in my... neck,
 for the last 15 years, so an approach to syncing the two has forever been on my
@@ -65,7 +65,7 @@ end
 
 Doesn't this all sound incredibly familiar? This is exactly what API description
 docs [(also known as
-specifications)](/blog/resolving-overloaded-terms-for-api-specifications-descriptions-contract)
+specifications)](/blog/resolving-overloaded-terms-for-api-specifications-descriptions-contracts)
 are talking about, required, types, formats, etc... all of this is already
 handled for us entirely by the same API descriptions we used to [generate our
 mock servers](http://github.com/stoplightio/prism/) for trial integrations, that
@@ -424,7 +424,7 @@ a project maintained by my friend and [Stoplight.io](https://stoplight.io/) coll
 
 The days of treating descriptions like some annoying thing you have to do later to get
 docs are long behind us. API descriptions now come first, are used for [contract
-testing](/blog/tricking-colleagues-into-writing-documentation-via-contract-testing),
+testing](/blog/writing-documentation-via-contract-testing),
 getting feedback on implementation, and a whole [bunch of other
 stuff](https://www.toptal.com/api-developers/5-new-things-rest-specification).
 

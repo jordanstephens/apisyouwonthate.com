@@ -129,10 +129,19 @@ const Pre = (props) => {
   );
 };
 
-const NextOptimizedImage = (props) => (
+const NextOptimizedImage = (props) => {
   // height and width are part of the props, so they get automatically passed here with {...props}
-  <Image {...props} layout="responsive" loading="lazy" alt={props?.alt} />
-);
+  const { src } = props;
+
+  if (src.startsWith('https://remotive.com/job/track')) {
+    // eslint-disable-next-line jsx-a11y/alt-text
+    return <Image height={1} width={1} {...props} />;
+  }
+
+  return (
+    <Image {...props} layout="responsive" loading="lazy" alt={props?.alt} />
+  );
+};
 
 const UnorderedListComponent = ({ children, ...rest }) => (
   <UnorderedList {...rest} stylePosition={'outside'} ml="1rem" mb="1rem">
